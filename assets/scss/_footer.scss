@@ -1,0 +1,16 @@
+.footer {
+  background-color: $color-dark;
+  padding-top: 3 * $gap;
+  padding-bottom: 7 * $gap;
+}
+.footer-container {
+  @extend %container;
+}
+.footer-header  {
+  text-align: center;
+  h2  {
+    color: $color-primary;
+    font-size: 2rem;
+
+  }
+}
