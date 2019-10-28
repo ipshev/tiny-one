@@ -1,12 +1,30 @@
 .header {
-  display: grid;
-  position: relative;
-  min-height: 100vh;
-  color: $color-light;
   background-color: $color-primary;
-  background-image: url(../img/img-header.png);
-  background-size: cover;
-  background-position: 50% 50%;
-  padding: 100px 0;
-  align-content: center;
+  
 }
+
+.header-menu  {
+  @extend %container;
+  position: relative;
+  padding-top: 3 * $gap;
+
+}
+
+.header-logo  {
+  display: flex;
+  align-items: center;
+  &__img  {
+    margin-right: $gap / 2;
+    display: block;
+  }
+  &__txt  {
+    display: block;
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+}
+
+.header-slider  {
+  height: 638px;
+}
+

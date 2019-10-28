@@ -1,4 +1,5 @@
 @import "../../libs/normalize-scss/sass/normalize/import-now";
+// @import "../../libs/font-awesome/scss/font-awesome";
 @import "skin";
 
 @import "variables";
@@ -7,17 +8,10 @@
 @import "extends";
 
 @import "common";
-@import "header/header";
-@import "header/header-overlay";
-@import "header/header-menu";
-@import "header/header-logo";
-@import "header/header-navbar";
-@import "header/header-content";
 
-@import "sections/section-skills";
-@import "sections/section-about";
-@import "sections/section-form";
-@import "sections/section-posts";
+@import "header/header";
+
+@import "sections/section-features";
 
 @import "footer";
 

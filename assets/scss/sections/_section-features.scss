@@ -1,0 +1,59 @@
+.features-container {
+    @extend %container;
+    padding-top: 4.25 * $gap;
+    padding-bottom: 7 * $gap;
+}
+.features-header  {
+  text-align: center;
+  padding: 0 3.25*$gap;
+  h2  {
+    font-size: 2rem;
+  }
+  p  {
+    font-size: 1.25rem;
+    margin-top: $gap / -2;
+  }
+}
+.features-content {
+  display: grid;
+  grid-column-gap: 2 * $gap;
+  grid-row-gap: 3 * $gap;
+  margin-top: 3.25 * $gap;
+  @include lg-min {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include lg-sm {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include sm {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+.feature  {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-column-gap: $gap;
+  &__img  {
+    i  {
+      font-size: 2.7rem;
+      
+    }
+  }
+
+  &__txt  {
+    h3  {
+      font-size: 1.375rem;
+      font-weight: 700;
+      margin-top: 0;
+    }
+    p  {
+      color: $color-gray;
+      margin-top: $gap / -2;
+      line-height: 1.2;
+    }
+
+  }
+
+}  
