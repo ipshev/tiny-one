@@ -1,0 +1,30 @@
+%container {
+  max-width: $ul;
+  margin: auto;
+  padding-left: $gap;
+  padding-right: $gap;
+}
+
+%btn {
+  display: block;
+  padding: 18px $gap;
+  height: $gap * 3;
+  text-align: center;
+  font-size: 1.125rem;
+  transition: background-color 0.5s;
+}
+
+%section {  //используется в секция about и posts
+  @include lg-min {
+    padding-top: $gap * 5;
+    padding-bottom: $gap * 5;
+  }
+  @include lg-md {
+    padding-top: $gap * 4;
+    padding-bottom: $gap * 4;
+  }
+  @include md {
+    padding-top: $gap * 3;
+    padding-bottom: $gap * 3;
+  }
+}

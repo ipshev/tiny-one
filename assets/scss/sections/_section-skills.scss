@@ -1,0 +1,134 @@
+.skills {
+  &__container {
+    display: grid;
+    padding-bottom: $gap;
+    @include lg-min { //экран шире 992px
+      gap: $gap / 2;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+    }
+    @include lg-md { //768-992px
+      gap: $gap / 2;
+      grid-template-columns: repeat(3, 1fr); //3 колонки
+      grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+    }
+    @include md-sm {  //576-768px
+      gap: $gap / 2;
+      grid-template-columns: 1fr 1fr; //2 колонки
+      grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+    }
+    @include sm { //экран шириной меньше 576px
+      gap: $gap;
+      grid-template-columns: 1fr; //всё в одну колонку
+      grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+    }
+  }
+  &__btn  {
+    display: flex;
+    justify-content: center;
+  }
+  @include sm-min { //экран шире 576px
+    padding: ($gap / 2) ($gap / 2) ($gap * 2);
+  }
+  @include sm { //экран шириной меньше 576px
+    padding: $gap;
+  }
+}
+
+.skill-item {
+  display: grid;
+  overflow: hidden;
+  position: relative;
+  background-color: $color-primary;
+  min-height: calc(33.33vh - 13px);
+
+  &:nth-of-type(1) {
+    grid-area: a1;
+  }
+
+  &:nth-of-type(2) {
+    grid-area: a2;
+  }
+
+  &:nth-of-type(3) {
+    grid-area: a3;
+  }
+
+  &:nth-of-type(4) {
+    grid-area: a4;
+  }
+
+  &:nth-of-type(5) {
+    grid-area: a5;
+  }
+
+  &:nth-of-type(6) {
+    grid-area: a6;
+  }
+
+  &:nth-of-type(7) {
+    grid-area: a7;
+  }
+
+  &:nth-of-type(8) {
+    grid-area: a8;
+  }
+
+  &:nth-of-type(9) {
+    grid-area: a9;
+  }
+
+  &__overlay {
+    z-index: 1;
+    background-color: $color-primary;
+    opacity: 0.8;
+    transition: opacity 0.5s;
+
+    @include abs-position;
+  }
+
+  &__image {
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: transform 0.5s;
+
+    @include abs-position;
+  }
+
+  &__title {
+    margin: 0;
+    z-index: 2;
+    letter-spacing: 0.1em;
+    @include abs-position;
+    @include md-min {
+      font-size: 1.25rem;
+    }
+    @include md {
+      font-size: 1.125rem;
+    }
+  }
+
+  &__link {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    transition: color 0.5s;
+  }
+
+  &:hover {
+    .skill-item__overlay {
+      opacity: 0.95 !important;
+    }
+
+    .skill-item__image {
+      transform: scale(1.1);
+    }
+    
+    .skill-item__link {
+      color: $color-accent;
+    }
+  }
+}

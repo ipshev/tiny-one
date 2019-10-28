@@ -1,0 +1,72 @@
+.about  {
+    background-color: $color-gray-light;
+    letter-spacing: 0.055em;
+    @extend %section; // плейсхолдер селектор устанавливает верхние и нижние отступы для секций
+    &__container  {
+      @extend %container;
+      display: grid;
+      @include lg-min { //=>992px
+        gap: 5 * $gap;
+        grid-template-columns: 1fr 271px; //ширина правой колонки равна ширине изображения в about__img
+      }
+      @include lg-md {  //=>768-992px
+        grid-gap: $gap * 2;
+        grid-template-columns: 1fr 271px;
+      }
+      @include md-sm {  //=>576-768px
+        grid-gap: $gap;
+        grid-template-columns: 1fr 236px;
+      }
+      @include sm {  //<576px
+        grid-gap: $gap;
+        grid-template-columns: 1fr; //всё в одну колонку
+      }
+    }
+    &__img  {
+      display: grid;
+      align-content: center;  //выравнивание картинки по вертикали и горизонтали
+      justify-items: center;
+      img  {
+        max-width: 100%;
+        max-height: 480px; //максимальная высота изображения
+        margin-top: $gap;
+      }
+    }
+    h2  {
+      margin-top: 0;
+    }
+    &__text  {
+      p  {
+        @include lg-min {
+          font-size: 1.125rem;
+        }
+        &:first-of-type  {
+          position: relative;
+          margin-top: -5px;
+          &::after {
+            position: absolute; //серая полоска-разделитель между блоком текста и изображением
+            top: 0;
+            width: 2px;
+            height: 200px;
+            content: "";
+            background-color: rgba($color-gray, 0.1);
+            @include lg-min {
+              right: -2.5 * $gap;
+            }
+            @include lg-md {
+              right: -$gap;
+            }
+            @include md-sm {
+              right: -$gap / 2;
+            }
+            @include sm {
+              display: none;
+            }
+          }
+        }
+        &:last-of-type  {
+          margin-top: 0;
+        }
+      }
+    }
+}

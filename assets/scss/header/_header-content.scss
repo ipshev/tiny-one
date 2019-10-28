@@ -1,0 +1,68 @@
+.header-content {
+  position: relative;
+  &__container  {
+    @extend %container;
+  }
+  &__title {
+    text-align: center;
+    letter-spacing: 0.08em;
+
+    @include lg-min {
+      margin: 0 0 53px;
+    }
+
+    @include lg {
+      margin: 0 0 43px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    @include sm {
+      flex-direction: column;  //изменение главной оси контейнера на маленьких экранах
+      align-items: center;
+    }
+    .btn  {
+      @include lg-min { //экраны шире 992px
+        min-width: 250px;
+        &:not(:last-of-type) {
+          margin-right: $gap;
+        }
+      }
+      @include lg-md  {  //экраны шириной 768-992px
+        min-width: 200px;
+        height: 50px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        letter-spacing: 0.1em;
+        font-size: 1rem;
+        &:not(:last-of-type) {
+          margin-right: $gap;
+        }
+      }
+      @include md-sm  {  //экраны шириной 576-768px
+        min-width: 170px;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        letter-spacing: 0.05em;
+        font-size: 1rem;
+        &:not(:last-of-type) {
+          margin-right: $gap;
+        }
+      }
+      @include sm  {  //экраны шириной меньше 576px
+        min-width: 170px;
+        height: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        letter-spacing: 0.05em;
+        font-size: 1rem;
+        &:not(:last-of-type) {
+          margin-bottom: $gap;
+        }
+      }
+    }
+  }
+}
