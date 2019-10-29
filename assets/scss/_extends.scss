@@ -4,5 +4,11 @@
   margin: auto;
   padding-right: $gap;
   padding-left: $gap;
- 
+}
+
+%form-components  {
+  height: 50px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
 }

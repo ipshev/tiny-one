@@ -19,3 +19,34 @@
     margin: -12px 60px 42px;
   }
 }
+.footer-form  {
+  display: grid;
+  gap: $gap;
+  @include sm  {
+    grid-template-columns: 1fr;
+    margin: 0 0 $gap;
+  }
+  @include md-sm  {
+    grid-template-columns: 1fr  127px;
+    margin: 0 0 $gap;
+  }
+  @include lg-md  {
+    grid-template-columns: 1fr  127px;
+    margin: 0 4*$gap 2*$gap;
+  }
+  @include lg-min  {
+    grid-template-columns: 1fr  127px;
+    margin: 0 5*$gap 3.5*$gap;
+  }
+  input  {
+    padding: 16px 22px;
+    @extend %form-components;
+  }
+  button  {
+    @extend %form-components;
+    cursor: pointer;
+    background-color: #ffd700;
+    font-weight: 700;
+    letter-spacing: 1.1em;
+  } 
+}
