@@ -11,6 +11,11 @@
   h2  {
     color: $color-primary;
     font-size: 2rem;
-
+  }
+  p  {
+    color: $color-gray;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin: -12px 60px 42px;
   }
 }

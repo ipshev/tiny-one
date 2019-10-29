@@ -587,6 +587,13 @@ h1 {
   font-size: 2rem;
 }
 
+.footer-header p {
+  color: #898989;
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: -12px 60px 42px;
+}
+
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
