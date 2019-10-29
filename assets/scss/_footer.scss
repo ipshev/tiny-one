@@ -45,7 +45,44 @@
   button  {
     @extend %form-components;
     cursor: pointer;
-    background-color: #ffd700;
+    background-color: $color-primary;
     font-weight: 700;
   } 
+}
+.footer-social  {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 110px;
+  a  {
+    display: block;
+    margin: 0 15px;
+    color: $color-primary;
+    font-size: 2.6rem;
+    transition: color 0.5s;
+    text-decoration: none;
+    &:hover,
+    fokus  {
+      color: $color-light;
+    }
+  }
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: 300px repeat(4, 1fr);
+  p  {
+    color: $color-gray;
+    line-height: 1.2em;
+  }
+  ul  {
+    line-height: 1.2em;
+  }
+  a  {
+    color: $color-gray;
+    transition: color 0.5s;
+    text-decoration: none;
+    &:hover,
+    fokus  {
+      color: $color-light;
+    }
+  }
 }

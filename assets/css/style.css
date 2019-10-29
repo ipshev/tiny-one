@@ -616,6 +616,59 @@ h1 {
   font-weight: 700;
 }
 
+.footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 110px;
+}
+
+.footer-social a {
+  display: block;
+  margin: 0 15px;
+  color: #ffd700;
+  font-size: 2.6rem;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  text-decoration: none;
+}
+
+.footer-social a:hover,
+.footer-social a fokus {
+  color: #ffffff;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 300px repeat(4, 1fr);
+}
+
+.footer-links p {
+  color: #898989;
+  line-height: 1.2em;
+}
+
+.footer-links ul {
+  line-height: 1.2em;
+}
+
+.footer-links a {
+  color: #898989;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a fokus {
+  color: #ffffff;
+}
+
 @media (min-width: 992px) {
   h1 {
     font-size: 3.75rem;
