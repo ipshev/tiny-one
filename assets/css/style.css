@@ -569,6 +569,14 @@ body.active::before {
   display: block;
 }
 
+.header-logo a {
+  text-decoration: none;
+}
+
+.header-logo a:visited {
+  color: inherit;
+}
+
 .header-logo__txt {
   display: block;
   font-size: 1.875rem;

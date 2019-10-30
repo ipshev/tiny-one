@@ -15,6 +15,12 @@
     margin-right: $gap / 2;
     display: block;
   }
+  a  {
+    text-decoration: none;
+    &:visited  {
+      color: inherit;
+    }
+  }
   &__txt  {
     display: block;
     font-size: 1.875rem;
