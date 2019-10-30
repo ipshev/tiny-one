@@ -1086,9 +1086,6 @@ body.active::before {
     grid-template-columns: 1fr;
     margin: 0 0 20px;
   }
-  .footer-links {
-    grid-template-columns: 1fr;
-  }
   .footer-links__item:nth-of-type(1) {
     grid-column: 1 / span 2;
   }
