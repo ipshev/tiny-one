@@ -1,17 +1,13 @@
 .header {
   background-color: $color-primary;
-  
 }
-
 .header-menu  {
   @extend %container;
   position: relative;
   padding-top: 3 * $gap;
   align-items: center;
   grid-template-columns: auto 1fr;
-
 }
-
 .header-logo  {
   display: flex;
   align-items: center;
@@ -95,17 +91,34 @@
       color: $color-light;
     }
   }
+}
 
-
+.slider-container  {
+  @extend %container;
+  overflow: hidden;
+  @include md-min  {
+    grid-template-rows: minmax(500px, max-content) 100px;
+  }
+}
+.slides  {
+  position: relative;
 }
 
 
-
-
-
-
-
-.header-slider  {
-  height: 638px;
+.indicators  {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  li  {
+    width: 15px;
+    height: 15px;
+    margin: -9px 3px 0;
+    cursor: pointer;
+    opacity: 0.5;
+    border-radius: 7.5px;
+    background-color: #ffffff;
+  }
 }
-
