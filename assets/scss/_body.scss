@@ -16,7 +16,7 @@ body {
     transition: opacity 1s;
 
     opacity: 0;
-    background-color: $color-primary;
+    background-color: $color-dark;
 
     @include abs-position(0, 18px);
   }

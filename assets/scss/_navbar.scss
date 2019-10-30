@@ -13,7 +13,7 @@
     transition: 1s ease-in-out;
     transform: rotate(0deg);
     &.active  {
-      z-index: 100;
+      z-index: 20;
       span  {
         background-color: $color-light;
         &:nth-of-type(1) {

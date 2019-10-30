@@ -482,10 +482,8 @@ template {
 }
 
 html {
-  overflow-y: scroll;
   font-size: 16px;
   font-family: "PT Sans", sans-serif;
-  color: #000000;
 }
 
 p {
@@ -517,7 +515,7 @@ body::before {
   -o-transition: opacity 1s;
   transition: opacity 1s;
   opacity: 0;
-  background-color: #ffd700;
+  background-color: #000000;
   position: absolute;
   top: 0;
   right: 18px;
@@ -641,7 +639,7 @@ body.active::before {
 }
 
 .header-navbar__hamburger.active {
-  z-index: 100;
+  z-index: 20;
 }
 
 .header-navbar__hamburger.active span {
