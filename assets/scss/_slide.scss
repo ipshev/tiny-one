@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
    display: grid;
-  padding-top: 20px;
+  padding-top: $gap;
   transition: transform 0.8s;
   transform: translateX(100vw);
   &.active {
@@ -16,10 +16,10 @@
     z-index: 1;
     transform: translateX(-100vw);
   }
-  grid-row-gap: 20px;
+  grid-row-gap: $gap;
   grid-template-rows: minmax(106px, max-content) auto 1fr auto;
   @include lg-min  {
-    grid-column-gap: 180px;
+    grid-column-gap: 9*$gap;
     grid-template-columns: 1fr auto;
     grid-template-areas:
         "hdr img"
@@ -28,7 +28,7 @@
         "brd img";
   }
   @include lg-md  {
-    grid-column-gap: 60px;
+    grid-column-gap: 3*$gap;
     grid-template-columns: 1fr auto;
     grid-template-areas:
         "hdr img"
@@ -37,7 +37,7 @@
         "brd img";
   }
   @include md-sm  {
-    grid-column-gap: 40px;
+    grid-column-gap: 2*$gap;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "hdr img"
@@ -46,7 +46,7 @@
         "brd img";
   }
   @include sm  {
-    grid-column-gap: 20px;
+    grid-column-gap: $gap;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
         "hdr hdr"
@@ -54,9 +54,6 @@
         "dsc img"
         "brd brd";
   }
-
-
-
   &__header  {
     margin: 0;
     font-size: 2rem;
@@ -78,7 +75,7 @@
     padding-top: 4px;
     grid-area: img;
     @include md-min  {
-      margin-right: 30px;
+      margin-right: 1.5*$gap ;
     }
     img  {
       @include md  {
@@ -106,10 +103,9 @@
       text-decoration: none;
       color: $color-dark;
       &:hover,
-      fokus  {
+      focus  {
         color: $color-light;
       }
     }
   }
-    
 }

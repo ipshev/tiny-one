@@ -1,19 +1,13 @@
 @import "../../libs/normalize-scss/sass/normalize/import-now";
-// @import "../../libs/font-awesome/scss/font-awesome";
 @import "skin";
-
 @import "variables";
 @import "mixins";
 @import "mixins-media";
 @import "extends";
-
 @import "common";
 @import "body";
-
 @import "header/header";
 @import "navbar";
 @import "sections/section-features";
 @import "slide";
-
 @import "footer";
-

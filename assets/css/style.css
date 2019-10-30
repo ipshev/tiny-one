@@ -736,7 +736,7 @@ body.active::before {
 }
 
 .header-navbar__link:hover,
-.header-navbar__link fokus {
+.header-navbar__link focus {
   color: #ffffff;
 }
 
@@ -874,7 +874,7 @@ body.active::before {
 }
 
 .slide__brands a:hover,
-.slide__brands a fokus {
+.slide__brands a focus {
   color: #ffffff;
 }
 
@@ -937,7 +937,7 @@ body.active::before {
 }
 
 .footer-social a:hover,
-.footer-social a fokus {
+.footer-social a focus {
   color: #ffffff;
 }
 
@@ -963,7 +963,7 @@ body.active::before {
 }
 
 .footer-links a:hover,
-.footer-links a fokus {
+.footer-links a focus {
   color: #ffffff;
 }
 
