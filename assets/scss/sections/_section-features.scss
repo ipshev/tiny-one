@@ -1,7 +1,21 @@
 .features-container {
   @extend %container;
-  padding-top: 4.25 * $gap;
-  padding-bottom: 6.6 * $gap;
+  @include lg-min  {
+    padding-top: 4.25 * $gap;
+    padding-bottom: 6.6 * $gap;
+  }
+  @include lg-md  {
+    padding-top: 3 * $gap;
+    padding-bottom: 4 * $gap;
+  }
+  @include md-sm  {
+    padding-top: 2 * $gap;
+    padding-bottom: 3 * $gap;
+  }
+  @include sm  {
+    padding-top: $gap;
+    padding-bottom: 2 * $gap;
+  }
 }
 .features-header {
   text-align: center;

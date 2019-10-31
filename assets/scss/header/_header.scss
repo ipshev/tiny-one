@@ -16,9 +16,11 @@
     display: block;
   }
   a  {
+    color: $color-dark;
     text-decoration: none;
-    &:visited  {
-      color: inherit;
+    &:visited,
+    :focus  {
+      color: $color-dark;
     }
   }
   &__txt  {
